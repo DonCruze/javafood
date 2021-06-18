@@ -26,4 +26,9 @@ public class AdditionalService {
         additionalRepo.save(additional);
         return "success";
     }
+
+    public String delete(Long id) {
+        additionalRepo.deleteById(id);
+        return "success";
+    }
 }
