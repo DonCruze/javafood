@@ -28,8 +28,7 @@ public class AdditionalService {
     }
 
     public String update(Additional additional) {
-        additionalRepo.save(additional);
-        return "success";
+        return additionalRepo.save(additional);
     }
 
     public String delete(Long id) {
