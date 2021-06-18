@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="Add:&#10;Additional Service delete by id" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1slKkwn2SmLeu0KOH2CuUkEXdoz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.JavaFoodApplication">
+    <configuration name="C:/Users/ravshancha/Downloads/database/javafood" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="JavaFoodApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="JavaFood" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="uz.chayxana.javafood.JavaFoodApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.C:/Users/ravshancha/Downloads/database/javafood" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="" />
+      <created>1621441884315</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621441884315</updated>
+      <workItem from="1621441887757" duration="363000" />
+      <workItem from="1621442318120" duration="31000" />
+      <workItem from="1622648499813" duration="2685000" />
+      <workItem from="1622702721433" duration="1302000" />
+      <workItem from="1622704422033" duration="115000" />
+      <workItem from="1622775051335" duration="1434000" />
+      <workItem from="1622780878402" duration="594000" />
+      <workItem from="1622817364880" duration="597000" />
+      <workItem from="1623078911018" duration="600000" />
+      <workItem from="1623082128603" duration="686000" />
+      <workItem from="1623126400092" duration="77000" />
+      <workItem from="1623214454921" duration="418000" />
+      <workItem from="1623428997226" duration="634000" />
+      <workItem from="1623430109832" duration="620000" />
+      <workItem from="1623468810589" duration="347000" />
+      <workItem from="1624026312119" duration="1562000" />
+    </task>
+    <task id="LOCAL-00001" summary="*">
+      <created>1622703208586</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622703208586</updated>
+    </task>
+    <task id="LOCAL-00002" summary="*">
+      <created>1622703274705</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622703274705</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add .gitignore file">
+      <created>1624027407420</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624027407420</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add:&#10;Additional Service delete by id">
+      <created>1624027862761</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624027862761</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="*" />
+    <MESSAGE value="add .gitignore file" />
+    <MESSAGE value="Add:&#10;Additional Service delete by id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add:&#10;Additional Service delete by id" />
+  </component>
+</project>
