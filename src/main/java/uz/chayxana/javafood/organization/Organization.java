@@ -1,0 +1,35 @@
+package uz.chayxana.javafood.organization;
+
+import lombok.Data;
+import uz.chayxana.javafood.contact.Contact;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
+@Entity
+@Table(name = "organization")
+public class Organization {
+    @Id
+    @GeneratedValue
+    private Long id;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "star_time")
+    private Long star_time;
+    @Column(name = "end_time")
+    private Long end_time;
+    @Column(name = "description")
+    private String description;
+    @Column(name = "location")
+    private String location;
+    @Column(name = "logo")
+    private String logo;
+    @Column(name = "delivery")
+    private Boolean delivery;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "organization_id")
+    private List<Contact> contacts = new ArrayList<>();
+}
