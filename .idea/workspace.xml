@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="change update method in Additional Service">
+    <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="create new branch dev">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-development.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-production.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/JavaFoodApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/JavaFoodApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +58,17 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Spring Boot.JavaFoodApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/ravshancha/Downloads/database/javafood" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -110,7 +128,8 @@
       <workItem from="1624028390768" duration="1046000" />
       <workItem from="1624254201606" duration="6000" />
       <workItem from="1624271112645" duration="899000" />
-      <workItem from="1624285755873" duration="332000" />
+      <workItem from="1624285755873" duration="2533000" />
+      <workItem from="1624288593641" duration="2408000" />
     </task>
     <task id="LOCAL-00001" summary="*">
       <created>1622703208586</created>
@@ -147,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624028760559</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="create new branch dev">
+      <created>1624286111613</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624286111613</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +196,18 @@
     <MESSAGE value="add .gitignore file" />
     <MESSAGE value="Add:&#10;Additional Service delete by id" />
     <MESSAGE value="change update method in Additional Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="change update method in Additional Service" />
+    <MESSAGE value="create new branch dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="create new branch dev" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,5 +1,9 @@
 package uz.chayxana.javafood.organization;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -7,6 +11,10 @@ import java.util.Optional;
 
 @Service
 public class OrganizationService {
+    @Value("${cbu.url}")
+    private String urlCBU;
+    @Value("${server.port}")
+    private String port;
     private final OrganizationRepo organizationRepo;
 
     public OrganizationService(
@@ -23,8 +31,18 @@ public class OrganizationService {
         return organizationRepo.findById(id);
     }
 
-    public Organization add(Organization organization) {
-        return organizationRepo.save(organization);
+    public ResponseEntity<?> add(Organization organization) {
+        try {
+            System.out.println(urlCBU);
+            System.out.println(port);
+            return new ResponseEntity(organizationRepo.save(organization), HttpStatus.OK);
+        } catch (DataIntegrityViolationException divEx) {
+            System.out.println(divEx.getMessage());
+            return new ResponseEntity("Nazvanie odinakovie", HttpStatus.BAD_REQUEST);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            return new ResponseEntity("Chto to pashlo ne tak", HttpStatus.BAD_REQUEST);
+        }
     }
 
     public Organization edit(Long id, Organization organization) {
