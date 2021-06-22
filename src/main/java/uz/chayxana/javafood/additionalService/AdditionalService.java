@@ -27,7 +27,7 @@ public class AdditionalService {
         return "success";
     }
 
-    public String update(Additional additional) {
+    public Additional update(Additional additional) {
         return additionalRepo.save(additional);
     }
 
