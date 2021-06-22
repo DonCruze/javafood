@@ -28,7 +28,7 @@ public class OrganizationController {
 
     @PostMapping
     public ResponseEntity<?> add(@RequestBody Organization organization) {
-        return ResponseEntity.ok(organizationService.add(organization));
+        return organizationService.add(organization);
     }
 
     @PutMapping("{id}")

@@ -14,7 +14,7 @@ public class Organization {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name = "name")
+    @Column(name = "name", unique = true)
     private String name;
     @Column(name = "star_time")
     private Long star_time;

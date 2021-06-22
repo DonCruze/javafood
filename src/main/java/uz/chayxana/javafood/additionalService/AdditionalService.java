@@ -27,8 +27,13 @@ public class AdditionalService {
         return "success";
     }
 
-    public Additional update(Additional additional) {
-        return additionalRepo.save(additional);
+    public String update(Additional additional) {
+        try {
+            additionalRepo.save(additional);
+            return "success";
+        } catch (Exception exception) {
+            return "chto to pashlo ne tak";
+        }
     }
 
     public String delete(Long id) {
