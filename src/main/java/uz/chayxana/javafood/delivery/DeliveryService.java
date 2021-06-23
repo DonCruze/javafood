@@ -51,7 +51,7 @@ public class DeliveryService {
             Optional.ofNullable(delivery.getExtraPrice()).ifPresent(temp::setExtraPrice);
             Optional.ofNullable(delivery.getStartTime()).ifPresent(temp::setStartTime);
             Optional.ofNullable(delivery.getEndTime()).ifPresent(temp::setEndTime);
-            Optional.ofNullable(delivery.getOrganization_id()).ifPresent(temp::setOrganization_id);
+//            Optional.ofNullable(delivery.getOrganization_id()).ifPresent(temp::setOrganization_id);
             return deliveryRepo.save(temp);
         } else {
             return new Delivery();

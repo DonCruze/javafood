@@ -6,28 +6,27 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class OrganizationMenuService {
+public class MenuService {
 
-//    private final OrganizationMenuRepo organizationMenuRepo;
+//    private final MenuRepo menuRepo;
 //
-//    public OrganizationMenuService(
-//            OrganizationMenuRepo organizationMenuRepo
+//    public MenuService(
+//            MenuRepo menuRepo
 //    ) {
-//        this.organizationMenuRepo = organizationMenuRepo;
+//        this.menuRepo = menuRepo;
 //    }
 //
-//    public List<uz.chayxana.javafood.organizationMenu.OrganizationMenu> findAll() {
-//        return organizationMenuRepo.findAll();
+//    public List<Menu> findAll() {
+//        return menuRepo.findAll();
 //    }
 //
 //
 //
-//    public  ResponseEntity<?> add(uz.chayxana.javafood.organizationMenu.OrganizationMenu organizationMenu) {
+//    public  ResponseEntity<?> add(Menu menu) {
 //        try {
-//            return new     ResponseEntity(organizationMenuRepo.save(organizationMenu), HttpStatus.OK);
+//            return new     ResponseEntity(menuRepo.save(menu), HttpStatus.OK);
 //        } catch (DataIntegrityViolationException divEx) {
 //            System.out.println(divEx.getMessage());
 //            return new ResponseEntity("Nazvanie odinakovie", HttpStatus.BAD_REQUEST);

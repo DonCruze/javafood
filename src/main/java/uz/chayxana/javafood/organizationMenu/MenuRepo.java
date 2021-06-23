@@ -1,4 +1,4 @@
-package uz.chayxana.javafood.menu;
+package uz.chayxana.javafood.organizationMenu;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

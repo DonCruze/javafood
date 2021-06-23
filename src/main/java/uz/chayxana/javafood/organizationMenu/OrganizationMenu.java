@@ -1,36 +1,33 @@
 package uz.chayxana.javafood.organizationMenu;
 
-import lombok.Data;
+import uz.chayxana.javafood.organization.Organization;
 
 import javax.persistence.*;
-import java.sql.Time;
+import java.util.Set;
 
-@Data
 @Entity
 @Table(name = "oraganizationMenu")
 public class OrganizationMenu {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name = "Price")
-    private Long price;
-    @Column(name = "Time")
-    private Time time;
-    @Column(name = "Organization_id")
-    private Long organization_id;
-    @Column(name = "Menu_id")
-    private Long menu_id;
 
+    @Column(name = "name")
+    private String name;
+
+    @ManyToMany
+    private Set<Organization> organizations;
+
+//    @OneToMany(mappedBy = "organizationMenu")
+//    private ArrayList<Menu> menus;
 
     public OrganizationMenu() {
     }
 
-    public OrganizationMenu(Long id, Long price, Time time, Long organization_id, Long menu_id) {
+    public OrganizationMenu(Long id, String name, Set<Organization> organizations) {
         this.id = id;
-        this.price = price;
-        this.time = time;
-        this.organization_id = organization_id;
-        this.menu_id = menu_id;
+        this.name = name;
+        this.organizations = organizations;
     }
 
     public Long getId() {
@@ -42,39 +39,21 @@ public class OrganizationMenu {
         return this;
     }
 
-    public Long getPrice() {
-        return price;
+    public String getName() {
+        return name;
     }
 
-    public OrganizationMenu setPrice(Long price) {
-        this.price = price;
+    public OrganizationMenu setName(String name) {
+        this.name = name;
         return this;
     }
 
-    public Time getTime() {
-        return time;
+    public Set<Organization> getOrganizations() {
+        return organizations;
     }
 
-    public OrganizationMenu setTime(Time time) {
-        this.time = time;
-        return this;
-    }
-
-    public Long getOrganization_id() {
-        return organization_id;
-    }
-
-    public OrganizationMenu setOrganization_id(Long organization_id) {
-        this.organization_id = organization_id;
-        return this;
-    }
-
-    public Long getMenu_id() {
-        return menu_id;
-    }
-
-    public OrganizationMenu setMenu_id(Long menu_id) {
-        this.menu_id = menu_id;
+    public OrganizationMenu setOrganizations(Set<Organization> organizations) {
+        this.organizations = organizations;
         return this;
     }
 }

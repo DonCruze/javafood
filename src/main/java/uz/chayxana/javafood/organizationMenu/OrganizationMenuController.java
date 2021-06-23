@@ -15,16 +15,16 @@ import java.util.List;
 @RequestMapping("api/v1/OrganizationMenu")
 public class OrganizationMenuController {
 
-    @Autowired
-    OrganizationMenuService organizationMenuService;
-
-
-    @GetMapping
-    public ResponseEntity<?> findAll() {
-        List<OrganizationMenu> textiles = organizationMenuService.findAll();
-        if (textiles.isEmpty())
-            return new ResponseEntity(textiles, HttpStatus.BAD_REQUEST);
-        else
-            return new ResponseEntity(textiles, HttpStatus.OK);
-    }
+//    @Autowired
+//    OrganizationMenuService organizationMenuService;
+//
+//
+//    @GetMapping
+//    public ResponseEntity<?> findAll() {
+//        List<OrganizationMenu> textiles = organizationMenuService.findAll();
+//        if (textiles.isEmpty())
+//            return new ResponseEntity(textiles, HttpStatus.BAD_REQUEST);
+//        else
+//            return new ResponseEntity(textiles, HttpStatus.OK);
+//    }
 }
