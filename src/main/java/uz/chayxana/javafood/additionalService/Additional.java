@@ -11,12 +11,17 @@ import javax.persistence.*;
 public class Additional {
     @Id
     @GeneratedValue
-    Long id;
+    private Long id;
+    @Column (name = "name", unique = true)
+            private String name;
+    @Column (name = "name")
+            private long price;
+    @Column (name = "price")
+            private String description;
+    @Column (name = "description",length = 4000)
+            private String organizationID;
+    @Column (name = "organizationID")
 
-    String name;
-
-    @Column(name = "description", length = 4000)
-    String description;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "organization_id")
