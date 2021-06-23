@@ -1,6 +1,5 @@
 package uz.chayxana.javafood.organization;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,10 +10,6 @@ import java.util.Optional;
 
 @Service
 public class OrganizationService {
-    @Value("${cbu.url}")
-    private String urlCBU;
-    @Value("${server.port}")
-    private String port;
     private final OrganizationRepo organizationRepo;
 
     public OrganizationService(
@@ -33,8 +28,6 @@ public class OrganizationService {
 
     public ResponseEntity<?> add(Organization organization) {
         try {
-            System.out.println(urlCBU);
-            System.out.println(port);
             return new ResponseEntity(organizationRepo.save(organization), HttpStatus.OK);
         } catch (DataIntegrityViolationException divEx) {
             System.out.println(divEx.getMessage());

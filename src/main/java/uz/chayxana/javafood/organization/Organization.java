@@ -29,7 +29,11 @@ public class Organization {
     @Column(name = "delivery")
     private Boolean delivery;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    @JoinColumn(name = "organization_id")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,
+            fetch = FetchType.EAGER, mappedBy = "organization")
     private List<Contact> contacts = new ArrayList<>();
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,
+            fetch = FetchType.EAGER, mappedBy = "organization")
+    private List<Contact> addServices = new ArrayList<>();
 }
