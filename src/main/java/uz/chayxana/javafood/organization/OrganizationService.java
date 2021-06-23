@@ -11,10 +11,7 @@ import java.util.Optional;
 
 @Service
 public class OrganizationService {
-    @Value("${cbu.url}")
-    private String urlCBU;
-    @Value("${server.port}")
-    private String port;
+
     private final OrganizationRepo organizationRepo;
 
     public OrganizationService(
@@ -33,8 +30,6 @@ public class OrganizationService {
 
     public ResponseEntity<?> add(Organization organization) {
         try {
-            System.out.println(urlCBU);
-            System.out.println(port);
             return new ResponseEntity(organizationRepo.save(organization), HttpStatus.OK);
         } catch (DataIntegrityViolationException divEx) {
             System.out.println(divEx.getMessage());
@@ -55,8 +50,10 @@ public class OrganizationService {
             Optional.ofNullable(organization.getDescription()).ifPresent(temp::setDescription);
             Optional.ofNullable(organization.getLocation()).ifPresent(temp::setLocation);
             Optional.ofNullable(organization.getLogo()).ifPresent(temp::setLogo);
-            Optional.ofNullable(organization.getDelivery()).ifPresent(temp::setDelivery);
             Optional.ofNullable(organization.getContacts()).ifPresent(temp::setContacts);
+            Optional.ofNullable(organization.getDeliveries()).ifPresent(temp::setDeliveries);
+            Optional.ofNullable(organization.getOrganizationMenus()).ifPresent(temp::setOrganizationMenus);
+            Optional.ofNullable(organization.getTypes()).ifPresent(temp::setTypes);
             return organizationRepo.save(temp);
         } else {
             return new Organization();

@@ -4,15 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="create new branch dev">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-development.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-production.properties" afterDir="false" />
+    <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="Add:&#10;Additional Service delete by id">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/Delivery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationMenu/OrganizationMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationMenu/OrganizationMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationMenu/OrganizationMenuRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationMenu/OrganizationMenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationType/OrganizationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationType/OrganizationTypeRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/TypeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/TypeRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/TypeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/JavaFoodApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/JavaFoodApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/Additional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/Additional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/AdditionalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/AdditionalService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-development.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-homeway.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-production.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +51,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="developer" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1slKkwn2SmLeu0KOH2CuUkEXdoz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,12 +72,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/Type" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\IdeaProjects\12\src\main\java\uz\chayxana\javafood\Type" />
+      <recent name="C:\Users\admin\IdeaProjects\12\src\main\java\uz\chayxana\javafood\organizationType" />
+      <recent name="C:\Users\admin\IdeaProjects\12\src\main\java\uz\chayxana\javafood\menu" />
+      <recent name="C:\Users\admin\IdeaProjects\12\src\main\java\uz\chayxana\javafood\OrganizationMenu" />
+      <recent name="C:\Users\admin\IdeaProjects\12\src\main\java\uz\chayxana\javafood\Delivery" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.JavaFoodApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -98,6 +129,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.C:/Users/ravshancha/Downloads/database/javafood" />
+        <item itemvalue="Gradle.C:/Users/ravshancha/Downloads/database/javafood" />
+        <item itemvalue="Gradle.C:/Users/ravshancha/Downloads/database/javafood" />
+        <item itemvalue="Gradle.C:/Users/ravshancha/Downloads/database/javafood" />
+        <item itemvalue="Gradle.C:/Users/ravshancha/Downloads/database/javafood" />
       </list>
     </recent_temporary>
   </component>
@@ -124,12 +159,9 @@
       <workItem from="1623428997226" duration="634000" />
       <workItem from="1623430109832" duration="620000" />
       <workItem from="1623468810589" duration="347000" />
-      <workItem from="1624026312119" duration="1625000" />
-      <workItem from="1624028390768" duration="1046000" />
-      <workItem from="1624254201606" duration="6000" />
-      <workItem from="1624271112645" duration="899000" />
-      <workItem from="1624285755873" duration="2533000" />
-      <workItem from="1624288593641" duration="2408000" />
+      <workItem from="1624026312119" duration="1562000" />
+      <workItem from="1624306161416" duration="1509000" />
+      <workItem from="1624373848644" duration="19992000" />
     </task>
     <task id="LOCAL-00001" summary="*">
       <created>1622703208586</created>
@@ -159,21 +191,7 @@
       <option name="project" value="LOCAL" />
       <updated>1624027862761</updated>
     </task>
-    <task id="LOCAL-00005" summary="change update method in Additional Service">
-      <created>1624028760559</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1624028760559</updated>
-    </task>
-    <task id="LOCAL-00006" summary="create new branch dev">
-      <created>1624286111613</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1624286111613</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,19 +213,6 @@
     <MESSAGE value="*" />
     <MESSAGE value="add .gitignore file" />
     <MESSAGE value="Add:&#10;Additional Service delete by id" />
-    <MESSAGE value="change update method in Additional Service" />
-    <MESSAGE value="create new branch dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="create new branch dev" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Add:&#10;Additional Service delete by id" />
   </component>
 </project>

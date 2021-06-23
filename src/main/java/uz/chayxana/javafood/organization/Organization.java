@@ -1,11 +1,16 @@
 package uz.chayxana.javafood.organization;
 
 import lombok.Data;
+import uz.chayxana.javafood.delivery.Delivery;
 import uz.chayxana.javafood.contact.Contact;
+import uz.chayxana.javafood.organizationMenu.OrganizationMenu;
+import uz.chayxana.javafood.organizationType.OrganizationType;
+import uz.chayxana.javafood.type.Type;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -14,6 +19,8 @@ public class Organization {
     @Id
     @GeneratedValue
     private Long id;
+    @ManyToMany(mappedBy = "organizations")
+    private Set<uz.chayxana.javafood.type.Type> types;
     @Column(name = "name", unique = true)
     private String name;
     @Column(name = "star_time")
@@ -26,10 +33,17 @@ public class Organization {
     private String location;
     @Column(name = "logo")
     private String logo;
-    @Column(name = "delivery")
-    private Boolean delivery;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "organization_id")
+    private List<Delivery> deliveries = new ArrayList<>();
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id")
     private List<Contact> contacts = new ArrayList<>();
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "organization_id")
+    private List<OrganizationMenu> organizationMenus = new ArrayList<>();
+
 }
