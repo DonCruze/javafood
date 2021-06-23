@@ -1,6 +1,7 @@
 package uz.chayxana.javafood.organization;
 
 import lombok.Data;
+import uz.chayxana.javafood.additionalService.Additional;
 import uz.chayxana.javafood.contact.Contact;
 
 import javax.persistence.*;
@@ -29,11 +30,9 @@ public class Organization {
     @Column(name = "delivery")
     private Boolean delivery;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,
-            fetch = FetchType.EAGER, mappedBy = "organization")
+    @OneToMany(mappedBy = "organization")
     private List<Contact> contacts = new ArrayList<>();
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,
-            fetch = FetchType.EAGER, mappedBy = "organization")
-    private List<Contact> addServices = new ArrayList<>();
+    @OneToMany(mappedBy = "organization")
+    private List<Additional> addServices = new ArrayList<>();
 }

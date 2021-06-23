@@ -17,16 +17,16 @@ public class Contact {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id", nullable = false)
-    private Organization organizationId;
+    private Organization organization;
 
     public Contact() {
     }
 
-    public Contact(Long id, String type, String info, Organization organizationId) {
+    public Contact(Long id, String type, String info, Organization organization) {
         this.id = id;
         this.type = type;
         this.info = info;
-        this.organizationId = organizationId;
+        this.organization = organization;
     }
 
     public Long getId() {
@@ -56,8 +56,8 @@ public class Contact {
         return this;
     }
 
-    public Contact setOrganizationId(Organization organizationId) {
-        this.organizationId = organizationId;
+    public Contact setOrganizationId(Organization organization) {
+        this.organization = organization;
         return this;
     }
 }
