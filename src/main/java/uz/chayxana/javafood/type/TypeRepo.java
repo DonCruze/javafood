@@ -1,8 +1,8 @@
-package uz.chayxana.javafood.organization;
+package uz.chayxana.javafood.type;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OrganizationRepo extends JpaRepository<Organization, Long> {
+public interface TypeRepo extends JpaRepository<Type, Long> {
 }

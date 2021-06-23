@@ -48,8 +48,10 @@ public class OrganizationService {
             Optional.ofNullable(organization.getDescription()).ifPresent(temp::setDescription);
             Optional.ofNullable(organization.getLocation()).ifPresent(temp::setLocation);
             Optional.ofNullable(organization.getLogo()).ifPresent(temp::setLogo);
-            Optional.ofNullable(organization.getDelivery()).ifPresent(temp::setDelivery);
             Optional.ofNullable(organization.getContacts()).ifPresent(temp::setContacts);
+            Optional.ofNullable(organization.getDeliveries()).ifPresent(temp::setDeliveries);
+            Optional.ofNullable(organization.getOrganizationMenus()).ifPresent(temp::setOrganizationMenus);
+            Optional.ofNullable(organization.getTypes()).ifPresent(temp::setTypes);
             return organizationRepo.save(temp);
         } else {
             return new Organization();
