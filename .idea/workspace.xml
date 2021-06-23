@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="Contact Bug Fixed - Relation OneToMany">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/Additional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/Additional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/contact/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/contact/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" afterDir="false" />
-    </list>
+    <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="Additional Bug Fixed - Relation OneToMany" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +121,7 @@
       <workItem from="1624285755873" duration="2533000" />
       <workItem from="1624288593641" duration="2484000" />
       <workItem from="1624344458733" duration="3000" />
-      <workItem from="1624459718171" duration="2937000" />
+      <workItem from="1624459718171" duration="3278000" />
     </task>
     <task id="LOCAL-00001" summary="*">
       <created>1622703208586</created>
@@ -184,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624461994942</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Additional Bug Fixed - Relation OneToMany">
+      <created>1624462789966</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624462789966</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +212,7 @@
     <MESSAGE value="create new branch dev" />
     <MESSAGE value="bug fixed" />
     <MESSAGE value="Contact Bug Fixed - Relation OneToMany" />
-    <option name="LAST_COMMIT_MESSAGE" value="Contact Bug Fixed - Relation OneToMany" />
+    <MESSAGE value="Additional Bug Fixed - Relation OneToMany" />
+    <option name="LAST_COMMIT_MESSAGE" value="Additional Bug Fixed - Relation OneToMany" />
   </component>
 </project>
