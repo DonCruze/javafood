@@ -12,8 +12,11 @@ import java.util.Set;
 public class Type {
     @Id
     @GeneratedValue
-    private Long id;
     @ManyToMany
+    @JoinTable(
+            name = "organizationType",
+            joinColumns = @JoinColumn(name = "organization_id"),
+            inverseJoinColumns = @JoinColumn(name = "type_id"))
     Set<Organization> organizations;
     @Column(name = "Name")
     private String name;

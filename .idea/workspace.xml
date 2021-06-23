@@ -5,41 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="Add:&#10;Additional Service delete by id">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/Delivery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationMenu/OrganizationMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationMenu/OrganizationMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationMenu/OrganizationMenuRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationMenu/OrganizationMenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationType/OrganizationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationType/OrganizationTypeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/TypeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/TypeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/TypeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/Additional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/Additional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/AdditionalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/additionalService/AdditionalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaFood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFood.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/contact/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/contact/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-development.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-homeway.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-production.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationType/OrganizationType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organizationType/OrganizationTypeRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/type/Type.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">

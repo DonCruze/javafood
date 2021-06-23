@@ -4,7 +4,6 @@ import lombok.Data;
 import uz.chayxana.javafood.delivery.Delivery;
 import uz.chayxana.javafood.contact.Contact;
 import uz.chayxana.javafood.organizationMenu.OrganizationMenu;
-import uz.chayxana.javafood.organizationType.OrganizationType;
 import uz.chayxana.javafood.type.Type;
 
 import javax.persistence.*;
@@ -20,7 +19,7 @@ public class Organization {
     @GeneratedValue
     private Long id;
     @ManyToMany(mappedBy = "organizations")
-    private Set<uz.chayxana.javafood.type.Type> types;
+    private Set<Type> types;
     @Column(name = "name", unique = true)
     private String name;
     @Column(name = "star_time")
