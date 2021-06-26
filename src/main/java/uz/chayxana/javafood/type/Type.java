@@ -9,9 +9,6 @@ public class Type {
     @GeneratedValue
     private Long id;
 
-//    @ManyToMany
-//    Set<Organization> organization;
-
     @Column(name = "name")
     private String name;
 
