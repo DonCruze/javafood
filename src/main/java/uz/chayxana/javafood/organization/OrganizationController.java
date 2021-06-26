@@ -3,6 +3,7 @@ package uz.chayxana.javafood.organization;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import uz.chayxana.javafood.dto.OrganizationRequest;
 
 import java.util.List;
 
@@ -27,12 +28,13 @@ public class OrganizationController {
     }
 
     @PostMapping
-    public ResponseEntity<?> add(@RequestBody Organization organization) {
-        return organizationService.add(organization);
+    public ResponseEntity<?> add(@RequestBody OrganizationRequest req) {
+        return organizationService.add(req);
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<?> edit(@PathVariable Long id, @RequestBody Organization organization) {
-        return ResponseEntity.ok(organizationService.edit(id, organization));
+    public ResponseEntity<?> edit(@PathVariable Long id, @RequestBody OrganizationRequest req) {
+        return organizationService.edit(id, req);
     }
+
 }
