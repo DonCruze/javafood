@@ -1,7 +1,11 @@
 package uz.chayxana.javafood.dto;
 
+import com.sun.istack.NotNull;
+
 public class ContactRequest {
+    @NotNull
     private String type;
+    @NotNull
     private String info;
 
     public ContactRequest() {

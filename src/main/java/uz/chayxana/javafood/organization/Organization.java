@@ -21,8 +21,12 @@ public class Organization {
     @GeneratedValue
     private Long id;
 
-//    @ManyToMany
-//    private Set<Type> types;
+    @ManyToMany
+    @JoinTable(
+            name = "organization_types",
+            joinColumns = @JoinColumn(name = "organization_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "type_id", referencedColumnName = "id"))
+    private List<Type> types;
 
     @Column(name = "name", unique = true)
     private String name;

@@ -1,5 +1,6 @@
 package uz.chayxana.javafood.contact;
 
+import com.sun.istack.NotNull;
 import uz.chayxana.javafood.dto.ContactRequest;
 import uz.chayxana.javafood.organization.Organization;
 
@@ -13,7 +14,9 @@ public class Contact {
     @GeneratedValue
     private Long id;
     @Column(name = "type")
+    @NotNull
     private String type;
+    @NotNull
     @Column(name = "number")
     private String info;
 
@@ -22,9 +25,10 @@ public class Contact {
     private Organization organization;
 
     public static Contact dtoToEntity(ContactRequest req) {
-        Optional.ofNullable(req.getInfo()).ifPresent(req::setInfo);
-        Optional.ofNullable(req.getType()).ifPresent(req::setType);
-        return new Contact();
+        Contact contact = new Contact();
+        Optional.ofNullable(req.getInfo()).ifPresent(contact::setInfo);
+        Optional.ofNullable(req.getType()).ifPresent(contact::setType);
+        return contact;
     }
 
     public Contact() {
@@ -64,7 +68,7 @@ public class Contact {
         return this;
     }
 
-    public Contact setOrganizationId(Organization organization) {
+    public Contact setOrganization(Organization organization) {
         this.organization = organization;
         return this;
     }

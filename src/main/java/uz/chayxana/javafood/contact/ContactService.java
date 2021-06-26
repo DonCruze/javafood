@@ -46,7 +46,7 @@ public class ContactService {
         Optional<Organization> organizationOptional = organizationService.findById(orgId);
         if (organizationOptional.isPresent()) {
             return new ResponseEntity(
-                    ContactResponse.entityToResponse(contactRepo.save(Contact.dtoToEntity(req))),
+                    ContactResponse.entityToResponse(contactRepo.save(Contact.dtoToEntity(req).setOrganization(organizationOptional.get()))),
                     HttpStatus.OK);
         } else {
             return new ResponseEntity<>("Contacts is Empty", HttpStatus.BAD_REQUEST);
