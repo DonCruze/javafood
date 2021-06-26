@@ -1,8 +1,10 @@
 package uz.chayxana.javafood.contact;
 
+import uz.chayxana.javafood.dto.ContactRequest;
 import uz.chayxana.javafood.organization.Organization;
 
 import javax.persistence.*;
+import java.util.Optional;
 
 @Entity
 @Table(name = "contact")
@@ -18,6 +20,12 @@ public class Contact {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id", nullable = false)
     private Organization organization;
+
+    public static Contact dtoToEntity(ContactRequest req) {
+        Optional.ofNullable(req.getInfo()).ifPresent(req::setInfo);
+        Optional.ofNullable(req.getType()).ifPresent(req::setType);
+        return new Contact();
+    }
 
     public Contact() {
     }

@@ -21,8 +21,8 @@ public class Organization {
     @GeneratedValue
     private Long id;
 
-    @ManyToMany
-    private Set<Type> types;
+//    @ManyToMany
+//    private Set<Type> types;
 
     @Column(name = "name", unique = true)
     private String name;
