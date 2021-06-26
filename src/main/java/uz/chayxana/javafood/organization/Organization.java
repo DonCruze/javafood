@@ -4,7 +4,7 @@ import lombok.Data;
 import uz.chayxana.javafood.additionalService.Additional;
 import uz.chayxana.javafood.contact.Contact;
 import uz.chayxana.javafood.delivery.Delivery;
-import uz.chayxana.javafood.organizationMenu.OrganizationMenu;
+import uz.chayxana.javafood.organizationMenu.Menu;
 import uz.chayxana.javafood.type.Type;
 
 import javax.persistence.*;
@@ -45,7 +45,7 @@ public class Organization {
     @OneToMany(mappedBy = "organization")
     private List<Additional> addServices = new ArrayList<>();
 
-    @ManyToMany
-    private Set<OrganizationMenu> organizationMenus;
+    @OneToMany(mappedBy = "organization")
+    private List<Menu> menus = new ArrayList<>();
 
 }
