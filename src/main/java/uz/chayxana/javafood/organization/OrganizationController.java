@@ -1,11 +1,8 @@
 package uz.chayxana.javafood.organization;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uz.chayxana.javafood.dto.OrganizationRequest;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/organization")
@@ -20,11 +17,12 @@ public class OrganizationController {
 
     @GetMapping
     public ResponseEntity<?> findAll() {
-        List<Organization> textiles = organizationService.findAll();
-        if (textiles.isEmpty())
-            return new ResponseEntity(textiles, HttpStatus.BAD_REQUEST);
-        else
-            return new ResponseEntity(textiles, HttpStatus.OK);
+        return organizationService.findAll();
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<?> findAllById(@PathVariable Long id) {
+        return organizationService.findAllById(id);
     }
 
     @PostMapping
@@ -37,4 +35,8 @@ public class OrganizationController {
         return organizationService.edit(id, req);
     }
 
+    @DeleteMapping("{id}")
+    public ResponseEntity<?> delete(@PathVariable Long id) {
+        return organizationService.delete(id);
+    }
 }
