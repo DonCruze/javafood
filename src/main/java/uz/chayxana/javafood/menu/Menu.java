@@ -15,21 +15,21 @@ public class Menu {
     @Column(name = "name")
     private String name;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "organization_id", nullable = false)
-//    private Organization organizations;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "organization_id", nullable = false)
+    private Organization organization;
 
-//    @OneToMany(mappedBy = "menu")
-//    private List<MenuItem> menuItems;
+    @OneToMany(mappedBy = "menu")
+    private List<MenuItem> menuItems;
 
     public Menu() {
     }
 
-    public Menu(Long id, String name, Organization organizations, List<MenuItem> menuItems) {
+    public Menu(Long id, String name, Organization organization, List<MenuItem> menuItems) {
         this.id = id;
         this.name = name;
-//        this.organizations = organizations;
-//        this.menuItems = menuItems;
+        this.organization = organization;
+        this.menuItems = menuItems;
     }
 
     public Long getId() {
@@ -48,15 +48,15 @@ public class Menu {
         this.name = name;
     }
 
-//    public void setOrganizations(Organization organizations) {
-//        this.organizations = organizations;
-//    }
+    public void setOrganization(Organization organizations) {
+        this.organization = organizations;
+    }
 
-//    public List<MenuItem> getMenuItems() {
-//        return menuItems;
-//    }
-//
-//    public void setMenuItems(List<MenuItem> menuItems) {
-//        this.menuItems = menuItems;
-//    }
+    public List<MenuItem> getMenuItems() {
+        return menuItems;
+    }
+
+    public void setMenuItems(List<MenuItem> menuItems) {
+        this.menuItems = menuItems;
+    }
 }

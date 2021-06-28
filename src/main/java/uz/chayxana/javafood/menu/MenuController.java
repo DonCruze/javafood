@@ -1,22 +1,21 @@
 package uz.chayxana.javafood.menu;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/v1/OrganizationMenu")
+@RequestMapping("api/v1/organization")
 public class MenuController {
 
-//    @Autowired
-//    OrganizationMenuService organizationMenuService;
-//
-//
-//    @GetMapping
-//    public ResponseEntity<?> findAll() {
-//        List<OrganizationMenu> textiles = organizationMenuService.findAll();
-//        if (textiles.isEmpty())
-//            return new ResponseEntity(textiles, HttpStatus.BAD_REQUEST);
-//        else
-//            return new ResponseEntity(textiles, HttpStatus.OK);
-//    }
+    @Autowired
+    MenuService service;
+
+    @GetMapping("{id}/menu")
+    public ResponseEntity<?> findAll(@PathVariable Long id) {
+        return service.findAll(id);
+    }
 }

@@ -18,20 +18,20 @@ public class MenuItem {
     @Column(name = "Description")
     private String description;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "menu_id", nullable = false)
-//    private Menu menus;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "menu_id", nullable = false)
+    private Menu menu;
 
     public MenuItem() {
     }
 
-    public MenuItem(Long id, Long price, Time time, String name, String description, Menu menus) {
+    public MenuItem(Long id, Long price, Time time, String name, String description, Menu menu) {
         this.id = id;
         this.price = price;
         this.time = time;
         this.name = name;
         this.description = description;
-//        this.menus = menus;
+        this.menu = menu;
     }
 
     public Long getId() {
@@ -74,7 +74,7 @@ public class MenuItem {
         this.description = description;
     }
 
-//    public void setMenus(Menu menu) {
-//        this.menus = menu;
-//    }
+    public void setMenu(Menu menu) {
+        this.menu = menu;
+    }
 }

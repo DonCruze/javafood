@@ -5,6 +5,7 @@ import uz.chayxana.javafood.additionalService.Additional;
 import uz.chayxana.javafood.contact.Contact;
 import uz.chayxana.javafood.delivery.Delivery;
 import uz.chayxana.javafood.dto.OrganizationRequest;
+import uz.chayxana.javafood.menu.Menu;
 import uz.chayxana.javafood.type.Type;
 
 import javax.persistence.*;
@@ -51,8 +52,8 @@ public class Organization {
     @OneToMany(mappedBy = "organization")
     private List<Additional> addServices = new ArrayList<>();
 
-//    @OneToMany(mappedBy = "organization")
-//    private List<Menu> menus = new ArrayList<>();
+    @OneToMany(mappedBy = "organization")
+    private List<Menu> menus = new ArrayList<>();
 
     @Column(name = "trash")
     private Boolean trash = false;
