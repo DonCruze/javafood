@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="Add:&#10;Additional Service delete by id">
+    <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="code review">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/OrganizationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +30,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1slKkwn2SmLeu0KOH2CuUkEXdoz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -132,6 +144,7 @@
       <workItem from="1624710244980" duration="7000" />
       <workItem from="1624714013939" duration="2651000" />
       <workItem from="1624718056208" duration="16000" />
+      <workItem from="1624890291040" duration="4123000" />
     </task>
     <task id="LOCAL-00001" summary="*">
       <created>1622703208586</created>
@@ -182,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624716555315</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="code review">
+      <created>1624890444129</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624890444129</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +224,7 @@
     <MESSAGE value="*" />
     <MESSAGE value="add .gitignore file" />
     <MESSAGE value="Add:&#10;Additional Service delete by id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add:&#10;Additional Service delete by id" />
+    <MESSAGE value="code review" />
+    <option name="LAST_COMMIT_MESSAGE" value="code review" />
   </component>
 </project>

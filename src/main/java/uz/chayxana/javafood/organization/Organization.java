@@ -11,7 +11,6 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Data
 @Entity
@@ -54,6 +53,9 @@ public class Organization {
 
 //    @OneToMany(mappedBy = "organization")
 //    private List<Menu> menus = new ArrayList<>();
+
+    @Column(name = "trash")
+    private Boolean trash = false;
 
     public static Organization reqToEntity(OrganizationRequest req) {
         return reqToEntity(new Organization(), req);
