@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="code review">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaFood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFood.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -42,12 +42,15 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1slKkwn2SmLeu0KOH2CuUkEXdoz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -73,17 +76,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.JavaFoodApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/Users/ravshancha/Downloads/database/javafood" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -103,7 +95,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="JavaFoodApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="JavaFoodApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="JavaFood" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="uz.chayxana.javafood.JavaFoodApplication" />
       <method v="2">
@@ -112,6 +104,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.JavaFoodApplication" />
         <item itemvalue="Gradle.C:/Users/ravshancha/Downloads/database/javafood" />
       </list>
     </recent_temporary>
@@ -147,6 +140,16 @@
       <workItem from="1624714013939" duration="2651000" />
       <workItem from="1624718056208" duration="16000" />
       <workItem from="1624890291040" duration="5851000" />
+      <workItem from="1625056175177" duration="209000" />
+      <workItem from="1625056391500" duration="745000" />
+      <workItem from="1625057729321" duration="60000" />
+      <workItem from="1625057809604" duration="398000" />
+      <workItem from="1625058472712" duration="1119000" />
+      <workItem from="1625059700617" duration="596000" />
+      <workItem from="1625061821813" duration="416000" />
+      <workItem from="1625062262950" duration="1776000" />
+      <workItem from="1625064272780" duration="386000" />
+      <workItem from="1625064712429" duration="975000" />
     </task>
     <task id="LOCAL-00001" summary="*">
       <created>1622703208586</created>
@@ -227,13 +230,37 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/dev" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="*" />
     <MESSAGE value="add .gitignore file" />
     <MESSAGE value="Add:&#10;Additional Service delete by id" />
     <MESSAGE value="code review" />
     <option name="LAST_COMMIT_MESSAGE" value="code review" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JavaFood$JavaFoodApplication.ic" NAME="JavaFoodApplication Coverage Results" MODIFIED="1625038207105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
