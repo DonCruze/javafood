@@ -5,18 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="140ea677-1b8a-472d-bf3f-4e529ca4b0fc" name="Default Changelist" comment="code review">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/dto/DeliveryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/dto/DeliveryResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/menu/MenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/organization/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/chayxana/javafood/delivery/DeliveryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">

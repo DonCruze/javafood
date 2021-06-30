@@ -1,9 +1,12 @@
 package uz.chayxana.javafood.delivery;
 
+import uz.chayxana.javafood.dto.DeliveryRequest;
+import uz.chayxana.javafood.dto.OrganizationRequest;
 import uz.chayxana.javafood.organization.Organization;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.util.Optional;
 
 @Entity
 @Table(name = "Delivery")
@@ -20,6 +23,9 @@ public class Delivery {
     @Column(name = "EndTime")
     private Time endTime;
 
+    @Column(name = "trash")
+    private Boolean trash = false;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id", nullable = false)
     private Organization organization;
@@ -27,18 +33,13 @@ public class Delivery {
     public Delivery() {
     }
 
-    public Delivery(Long id, Long price, Long extraPrice, Time startTime, Time endTime, Organization organization) {
-        this.id = id;
-        this.price = price;
-        this.extraPrice = extraPrice;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.organization = organization;
+    public static Delivery reqToEntity(DeliveryRequest req) {
+        return reqToEntity(new Delivery(), req);
     }
 
-    public Delivery setOrganization(Organization organization_id) {
-        this.organization = organization_id;
-        return this;
+    public static Delivery reqToEntity(Delivery entity, DeliveryRequest req) {
+        Optional.ofNullable(req.getPrice()).ifPresent(entity::setPrice);
+        return entity;
     }
 
     public Long getId() {
@@ -83,6 +84,15 @@ public class Delivery {
 
     public Delivery setEndTime(Time endTime) {
         this.endTime = endTime;
+        return this;
+    }
+
+    public Boolean getTrash() {
+        return trash;
+    }
+
+    public Delivery setTrash(Boolean trash) {
+        this.trash = trash;
         return this;
     }
 }
