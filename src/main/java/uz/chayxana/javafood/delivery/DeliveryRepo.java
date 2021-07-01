@@ -11,6 +11,7 @@ import java.util.Optional;
 public interface DeliveryRepo extends JpaRepository<Delivery, Long> {
 
     List<Delivery> findAllByTrashIsFalse();
+    List<Delivery> findAllByTrashIsFalseAAndOrganization(Organization organization);
 
     // select * from organization where id = :id and trash = false
     Optional<Delivery> findByIdAndTrashIsFalse(Long id);

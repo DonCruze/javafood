@@ -12,14 +12,15 @@ public class DeliveryRequest implements Serializable {
     @JsonProperty("ExtraPrice")
     private Long extraPrice;
     @JsonProperty("start_time")
-    private Time starTime;
+    private String starTime;
     @JsonProperty("end_time")
-    private Time endTime;
+    private String endTime;
+
 
     public DeliveryRequest() {
     }
 
-    public DeliveryRequest(Long price, Long extraPrice, Time starTime, Time endTime) {
+    public DeliveryRequest(Long price, Long extraPrice, String starTime, String endTime) {
         this.price = price;
         this.extraPrice = extraPrice;
         this.starTime = starTime;
@@ -42,19 +43,19 @@ public class DeliveryRequest implements Serializable {
         this.extraPrice = extraPrice;
     }
 
-    public Time getStarTime() {
+    public String getStarTime() {
         return starTime;
     }
 
-    public void setStarTime(Time starTime) {
+    public void setStarTime(String starTime) {
         this.starTime = starTime;
     }
 
-    public Time getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Time endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 

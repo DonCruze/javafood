@@ -1,6 +1,11 @@
 package uz.chayxana.javafood.type;
 
+import uz.chayxana.javafood.delivery.Delivery;
+import uz.chayxana.javafood.dto.DeliveryRequest;
+import uz.chayxana.javafood.dto.TypeRequest;
+
 import javax.persistence.*;
+import java.util.Optional;
 
 @Entity
 @Table(name = "type")
@@ -12,12 +17,19 @@ public class Type {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "trash")
+    private Boolean trash = false;
+
     public Type() {
     }
 
-    public Type(Long id, String name) {
-        this.id = id;
-        this.name = name;
+    public static Type reqToEntity(TypeRequest req) {
+        return reqToEntity(new Type(), req);
+    }
+
+    public static Type reqToEntity(Type entity, TypeRequest req) {
+        Optional.ofNullable(req.getName()).ifPresent(entity::setName);
+        return entity;
     }
 
     public Long getId() {
@@ -35,6 +47,15 @@ public class Type {
 
     public Type setName(String name) {
         this.name = name;
+        return this;
+    }
+
+    public Boolean getTrash() {
+        return trash;
+    }
+
+    public Type setTrash(Boolean trash) {
+        this.trash = trash;
         return this;
     }
 }

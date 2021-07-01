@@ -3,9 +3,10 @@ package uz.chayxana.javafood.type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import uz.chayxana.javafood.delivery.DeliveryService;
+import uz.chayxana.javafood.dto.DeliveryRequest;
+import uz.chayxana.javafood.dto.TypeRequest;
 
 import java.util.List;
 
@@ -19,10 +20,22 @@ public class TypeController {
 
     @GetMapping
     public ResponseEntity<?> findAll() {
-        List<Type> textiles = typeService.findAll();
-        if (textiles.isEmpty())
-            return new ResponseEntity(textiles, HttpStatus.BAD_REQUEST);
-        else
-            return new ResponseEntity(textiles, HttpStatus.OK);
+        return typeService.findAll();
+    }
+
+    @PostMapping
+    public ResponseEntity<?> add(@RequestBody TypeRequest req) {
+        return typeService.add(req);
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<?> edit(@PathVariable Long id, @RequestBody TypeRequest req) {
+        return typeService.edit(id, req);
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<?> delete(@PathVariable Long id) {
+        return typeService.delete(id);
     }
 }
+

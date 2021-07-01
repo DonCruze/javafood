@@ -5,7 +5,6 @@ import uz.chayxana.javafood.dto.OrganizationRequest;
 import uz.chayxana.javafood.organization.Organization;
 
 import javax.persistence.*;
-import java.sql.Time;
 import java.util.Optional;
 
 @Entity
@@ -19,9 +18,9 @@ public class Delivery {
     @Column(name = "ExtraPrice")
     private Long extraPrice;
     @Column(name = "StartTime")
-    private Time startTime;
+    private String startTime;
     @Column(name = "EndTime")
-    private Time endTime;
+    private String endTime;
 
     @Column(name = "trash")
     private Boolean trash = false;
@@ -39,6 +38,9 @@ public class Delivery {
 
     public static Delivery reqToEntity(Delivery entity, DeliveryRequest req) {
         Optional.ofNullable(req.getPrice()).ifPresent(entity::setPrice);
+        Optional.ofNullable(req.getExtraPrice()).ifPresent(entity::setExtraPrice);
+        Optional.ofNullable(req.getStarTime()).ifPresent(entity::setStartTime);
+        Optional.ofNullable(req.getEndTime()).ifPresent(entity::setEndTime);
         return entity;
     }
 
@@ -69,20 +71,20 @@ public class Delivery {
         return this;
     }
 
-    public Time getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public Delivery setStartTime(Time startTime) {
+    public Delivery setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
 
-    public Time getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public Delivery setEndTime(Time endTime) {
+    public Delivery setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -93,6 +95,11 @@ public class Delivery {
 
     public Delivery setTrash(Boolean trash) {
         this.trash = trash;
+        return this;
+    }
+
+    public Delivery setOrganization(Organization organization) {
+        this.organization = organization;
         return this;
     }
 }

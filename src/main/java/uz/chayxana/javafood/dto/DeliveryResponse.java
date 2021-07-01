@@ -6,33 +6,32 @@ import uz.chayxana.javafood.delivery.Delivery;
 import uz.chayxana.javafood.organization.Organization;
 
 import java.io.Serializable;
-import java.sql.Time;
 import java.util.Optional;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class DeliveryResponse implements Serializable {
-    @JsonProperty("Price")
+    @JsonProperty("price")
     private Long price;
-    @JsonProperty("ExtraPrice")
+    @JsonProperty("extra_price")
     private Long extraPrice;
     @JsonProperty("start_time")
-    private Time startTime;
+    private String startTime;
     @JsonProperty("end_time")
-    private Time endTime;
+    private String endTime;
 
     public static DeliveryResponse entityToResponse(Delivery entity) {
         DeliveryResponse response = new DeliveryResponse();
-        Optional.ofNullable(entity.getPrice()).ifPresent(s -> response.setPrice(s));
-        Optional.ofNullable(entity.getExtraPrice()).ifPresent(s -> response.setExtraPrice(s));
-        Optional.ofNullable(entity.getStartTime()).ifPresent(s -> response.setStartTime(s));
-        Optional.ofNullable(entity.getEndTime()).ifPresent(s -> response.setendTime(s));
+        Optional.ofNullable(entity.getPrice()).ifPresent(response::setPrice);
+        Optional.ofNullable(entity.getExtraPrice()).ifPresent(response::setExtraPrice);
+        Optional.ofNullable(entity.getStartTime()).ifPresent(response::setStartTime);
+        Optional.ofNullable(entity.getEndTime()).ifPresent(response::setEndTime);
         return response;
     }
 
     public DeliveryResponse() {
     }
 
-    public DeliveryResponse(Long price, Long extraPrice, Time startTime, Time endTime) {
+    public DeliveryResponse(Long price, Long extraPrice, String startTime, String endTime) {
         this.price = price;
         this.extraPrice = extraPrice;
         this.startTime = startTime;
@@ -43,30 +42,35 @@ public class DeliveryResponse implements Serializable {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public DeliveryResponse setPrice(Long price) {
         this.price = price;
+        return this;
     }
 
     public Long getExtraPrice() {
-        return price;
+        return extraPrice;
     }
 
-    public void setExtraPrice(Long extraPrice) {
+    public DeliveryResponse setExtraPrice(Long extraPrice) {
         this.extraPrice = extraPrice;
+        return this;
     }
 
-    public Time startTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Time startTime) {
+    public DeliveryResponse setStartTime(String startTime) {
         this.startTime = startTime;
+        return this;
     }
 
-    public Time getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setendTime(Time price) { this.endTime = endTime; }
-
+    public DeliveryResponse setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
 }
