@@ -13,13 +13,13 @@ public class Delivery {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name = "Price")
+    @Column(name = "price")
     private Long price;
-    @Column(name = "ExtraPrice")
+    @Column(name = "extra_price")
     private Long extraPrice;
-    @Column(name = "StartTime")
+    @Column(name = "start_time")
     private String startTime;
-    @Column(name = "EndTime")
+    @Column(name = "end_time")
     private String endTime;
 
     @Column(name = "trash")

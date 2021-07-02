@@ -1,17 +1,14 @@
 package uz.chayxana.javafood.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sun.istack.NotNull;
 
-import javax.persistence.Column;
-import java.io.Serializable;
-import java.sql.Time;
-
-public class DeliveryRequest implements Serializable {
-    @JsonProperty("Price")
+public class DeliveryRequest{
+    @JsonProperty("price")
     private Long price;
-    @JsonProperty("ExtraPrice")
+    @JsonProperty("extraPrice")
     private Long extraPrice;
-    @JsonProperty("start_time")
+    @JsonProperty("star_time")
     private String starTime;
     @JsonProperty("end_time")
     private String endTime;
@@ -26,6 +23,7 @@ public class DeliveryRequest implements Serializable {
         this.starTime = starTime;
         this.endTime = endTime;
     }
+
 
     public Long getPrice() {
         return price;
@@ -58,5 +56,5 @@ public class DeliveryRequest implements Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
-
 }
+
