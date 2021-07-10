@@ -2,10 +2,7 @@ package uz.chayxana.javafood.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import uz.chayxana.javafood.delivery.Delivery;
 import uz.chayxana.javafood.type.Type;
-
-import javax.persistence.Column;
 import java.io.Serializable;
 import java.util.Optional;
 

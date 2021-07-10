@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import uz.chayxana.javafood.dto.AdditionalRequest;
+import uz.chayxana.javafood.dto.DeliveryRequest;
 
 @Api(value = "Additional Service", description = "")
 @RestController
@@ -14,28 +16,38 @@ public class AdditionalController {
     @Autowired
     AdditionalService additionalService;
 
-    @ApiOperation(value = "Find All")
-    @GetMapping
+    @GetMapping("additional")
     public ResponseEntity<?> findAll() {
-        return ResponseEntity.ok(additionalService.findAll());
+        return additionalService.findAll();
     }
 
-    @ApiOperation(value = "Get by One with Id")
-    @GetMapping("{id}")
-    public ResponseEntity<?> getOne(@PathVariable Long id) {
-        return ResponseEntity.ok(additionalService.getOne(id));
+    @GetMapping("organization/{org_id}/additional")
+    public ResponseEntity<?> organizationAdditionals(@PathVariable Long org_id) {
+        return additionalService.organizationAdditionals(org_id);
     }
 
-    @ApiOperation(value = "Add one Service")
-    @PostMapping
-    public ResponseEntity<?> add(@RequestBody Additional additional) {
-        return ResponseEntity.ok(additionalService.add(additional));
+    @PostMapping("organization/{org_id}/additional")
+    public ResponseEntity<?> add(
+            @PathVariable(name = "org_id") Long orgId,
+            @RequestBody AdditionalRequest req
+    ) {
+        return additionalService.add(orgId, req);
     }
 
-    @ApiOperation(value = "delete addition service")
-    @DeleteMapping("{additional_id}")
-    public ResponseEntity<?> deleteOne(@PathVariable(name = "additional_id") Long id) {
-//        return new ResponseEntity(" ", HttpStatus.OK);
-        return new ResponseEntity(additionalService.delete(id), HttpStatus.OK);
+    @DeleteMapping("addition/{additional_id}")
+    public ResponseEntity<?> delete(
+            @PathVariable(name = "additional_id") Long additionalId
+    ) {
+        return additionalService.delete(additionalId);
+    }
+
+    @PutMapping("organization/{org_id}/additional/{additional_id}")
+    public ResponseEntity<?> edit(
+            @PathVariable(name = "org_id") Long orgId,
+            @RequestBody AdditionalRequest req,
+            @PathVariable(name = "additional_id") Long additionalId
+    ) {
+        return additionalService.edit(orgId, req, additionalId);
     }
 }
+

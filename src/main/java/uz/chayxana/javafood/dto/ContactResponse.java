@@ -7,13 +7,13 @@ import java.util.Optional;
 public class ContactResponse {
     private Long id;
     private String type;
-    private String info;
+    private String number;
 
     public static ContactResponse entityToResponse(Contact contact) {
         ContactResponse response = new ContactResponse();
         Optional.ofNullable(contact.getId()).ifPresent(response::setId);
         Optional.ofNullable(contact.getType()).ifPresent(response::setType);
-        Optional.ofNullable(contact.getInfo()).ifPresent(response::setInfo);
+        Optional.ofNullable(contact.getNumber()).ifPresent(response::setNumber);
         return response;
     }
 
@@ -22,7 +22,7 @@ public class ContactResponse {
 
     public ContactResponse(String type, String info) {
         this.type = type;
-        this.info = info;
+        this.number = number;
     }
 
     public Long getId() {
@@ -42,12 +42,12 @@ public class ContactResponse {
         return this;
     }
 
-    public String getInfo() {
-        return info;
+    public String getNumber() {
+        return number;
     }
 
-    public ContactResponse setInfo(String info) {
-        this.info = info;
+    public ContactResponse setNumber(String number) {
+        this.number = number;
         return this;
     }
 }

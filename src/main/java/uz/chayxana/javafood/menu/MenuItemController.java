@@ -14,12 +14,5 @@ public class MenuItemController {
     MenuItemService menuItemService;
 
 
-//    @GetMapping
-//    public ResponseEntity<?> findAll() {
-//        List<Menu> textiles = menuService.findAll();
-//        if (textiles.isEmpty())
-//            return new ResponseEntity(textiles, HttpStatus.BAD_REQUEST);
-//        else
-//            return new ResponseEntity(textiles, HttpStatus.OK);
-//    }
+
 }

@@ -6,14 +6,14 @@ public class ContactRequest {
     @NotNull
     private String type;
     @NotNull
-    private String info;
+    private String number;
 
     public ContactRequest() {
     }
 
-    public ContactRequest(String type, String info) {
+    public ContactRequest(String type, String number) {
         this.type = type;
-        this.info = info;
+        this.number = number;
     }
 
     public static ContactRequest entityToDto() {
@@ -29,12 +29,12 @@ public class ContactRequest {
         return this;
     }
 
-    public String getInfo() {
-        return info;
+    public String getNumber() {
+        return number;
     }
 
-    public ContactRequest setInfo(String info) {
-        this.info = info;
+    public ContactRequest setNumber(String number) {
+        this.number = number;
         return this;
     }
 }

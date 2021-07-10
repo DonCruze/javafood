@@ -2,17 +2,15 @@ package uz.chayxana.javafood.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.io.Serializable;
-
-public class TypeRequest implements Serializable {
+public class MenuRequest {
 
     @JsonProperty("name")
     private String name;
 
-    public TypeRequest() {
+    public MenuRequest() {
     }
 
-    public TypeRequest(String name) {
+    public MenuRequest(String name) {
         this.name = name;
     }
 

@@ -1,7 +1,6 @@
 package uz.chayxana.javafood.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.sun.istack.NotNull;
 
 public class DeliveryRequest{
     @JsonProperty("price")

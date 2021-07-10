@@ -1,7 +1,6 @@
 package uz.chayxana.javafood.type;
 
-import uz.chayxana.javafood.delivery.Delivery;
-import uz.chayxana.javafood.dto.DeliveryRequest;
+
 import uz.chayxana.javafood.dto.TypeRequest;
 
 import javax.persistence.*;
@@ -14,7 +13,7 @@ public class Type {
     @GeneratedValue
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name", unique = true)
     private String name;
 
     @Column(name = "trash")

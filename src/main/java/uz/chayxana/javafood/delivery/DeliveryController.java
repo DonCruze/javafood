@@ -1,62 +1,49 @@
 package uz.chayxana.javafood.delivery;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import uz.chayxana.javafood.dto.ContactRequest;
 import uz.chayxana.javafood.dto.DeliveryRequest;
 
 @RestController
 @RequestMapping("api/v1")
 public class DeliveryController {
-    private final DeliveryService deliveryService;
 
-    public DeliveryController(
-            DeliveryService deliveryService
-    ) {
-        this.deliveryService = deliveryService;
-    }
+    @Autowired
+    DeliveryService deliveryService;
 
-//    @GetMapping("{id}/delivery")
-//    public ResponseEntity<?> findAll() {
-//        return deliveryService.findAll();
-//    }
-
-//    @PostMapping("{id}/delivery")
-//    public ResponseEntity<?> add(@RequestBody DeliveryRequest req) {
-//        return deliveryService.add(req);
-//    }
-
-//    @PutMapping("{id}/delivery/{id}")
-//    public ResponseEntity<?> edit(@PathVariable Long id, @RequestBody DeliveryRequest req) {
-//        return deliveryService.edit(id, req);
-//    }
-
-    @DeleteMapping("organization/{org_id}/delivery/{del_id}")
-    public ResponseEntity<?> delete(@PathVariable Long id) {
-        return deliveryService.delete(id);
-    }
-
-    @PostMapping("organization/{org_id}/delivery")
-    public ResponseEntity<?> setOrganizationDeliverys(
-            @PathVariable(name = "org_id") Long orgId,
-            @RequestBody DeliveryRequest req
-    ) {
-        return deliveryService.setOrganizationDeliveries(orgId, req);
-    }
-
-    @PutMapping("organization/{org_id}/delivery/{del_id}")
-    public ResponseEntity<?> setOrganizationDeliverys(
-            @PathVariable(name = "org_id") Long orgId,
-            @RequestBody DeliveryRequest req,
-            @PathVariable(name = "del_id") Long delId
-    ) {
-        return deliveryService.updateOrganizationDeliveries(orgId, req, delId);
+    @GetMapping("delivery")
+    public ResponseEntity<?> findAll() {
+        return deliveryService.findAll();
     }
 
     @GetMapping("organization/{org_id}/delivery")
-    public ResponseEntity<?> organizationDeliverys(
-            @PathVariable(name = "org_id") Long orgId
-    ) {
-        return deliveryService.getOrganizationDeliveries(orgId);
+    public ResponseEntity<?> organizationDeliveries(@PathVariable Long org_id) {
+        return deliveryService.organizationDeliveries(org_id);
     }
 
+    @PostMapping("organization/{org_id}/delivery")
+    public ResponseEntity<?> add(
+            @PathVariable(name = "org_id") Long orgId,
+            @RequestBody DeliveryRequest req
+    ) {
+        return deliveryService.add(orgId, req);
+    }
+
+    @DeleteMapping("delivery/{delivery_id}")
+    public ResponseEntity<?> delete(
+            @PathVariable(name = "delivery_id") Long deliveryId
+    ) {
+        return deliveryService.delete(deliveryId);
+    }
+
+    @PutMapping("organization/{org_id}/delivery/{delivery_id}")
+    public ResponseEntity<?> edit(
+            @PathVariable(name = "org_id") Long orgId,
+            @RequestBody DeliveryRequest req,
+            @PathVariable(name = "delivery_id") Long deliveryId
+    ) {
+        return deliveryService.edit(orgId, req, deliveryId);
+    }
 }

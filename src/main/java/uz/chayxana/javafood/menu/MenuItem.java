@@ -2,6 +2,7 @@ package uz.chayxana.javafood.menu;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "menu_item")
@@ -9,14 +10,21 @@ public class MenuItem {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name = "Price")
+
+    @Column(name = "price")
     private Long price;
+
     @Column(name = "Time")
-    private Time time;
+    private Timestamp time;
+
     @Column(name = "Name")
     private String name;
+
     @Column(name = "Description")
     private String description;
+
+    @Column(name = "trash")
+    private Boolean trash = false;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "menu_id", nullable = false)
@@ -25,7 +33,7 @@ public class MenuItem {
     public MenuItem() {
     }
 
-    public MenuItem(Long id, Long price, Time time, String name, String description, Menu menu) {
+    public MenuItem(Long id, Long price, Timestamp time, String name, String description, Menu menu) {
         this.id = id;
         this.price = price;
         this.time = time;
@@ -50,11 +58,11 @@ public class MenuItem {
         this.price = price;
     }
 
-    public Time getTime() {
+    public Timestamp getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(Timestamp time) {
         this.time = time;
     }
 
@@ -74,7 +82,14 @@ public class MenuItem {
         this.description = description;
     }
 
-    public void setMenu(Menu menu) {
-        this.menu = menu;
+    public void setMenu(Menu menu) { this.menu = menu; }
+
+    public Boolean getTrash() {
+        return trash;
+    }
+
+    public MenuItem setTrash(Boolean trash) {
+        this.trash = trash;
+        return this;
     }
 }

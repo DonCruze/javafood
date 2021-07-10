@@ -5,24 +5,27 @@ import org.springframework.web.bind.annotation.*;
 import uz.chayxana.javafood.dto.OrganizationRequest;
 
 @RestController
-@RequestMapping("api/v1/organization")
+@RequestMapping("api/v1")
 public class OrganizationController {
-    private final OrganizationService organizationService;
+    private  final OrganizationService organizationService;
 
-    public OrganizationController(
-            OrganizationService organizationService
+    public OrganizationController (
+        OrganizationService organizationService
     ) {
         this.organizationService = organizationService;
     }
 
-    @GetMapping
-    public ResponseEntity<?> findAll() {
-        return organizationService.findAll();
-    }
+    @GetMapping("/organization")
+    public ResponseEntity findAll(){return  organizationService.findAll();}
 
-    @GetMapping("{id}")
-    public ResponseEntity<?> findAllById(@PathVariable Long id) {
-        return organizationService.findAllById(id);
+    @GetMapping("/organization/{id}")
+    public ResponseEntity<?> findById(@PathVariable Long id) {return organizationService.findById(id); }
+
+    @GetMapping("/{organization_id}/type")
+    public ResponseEntity<?> findAllTypes(
+            @PathVariable(name = "organization_id") Long organizationId
+    ) {
+        return organizationService.findAllTypes(organizationId);
     }
 
     @PostMapping
@@ -30,12 +33,12 @@ public class OrganizationController {
         return organizationService.add(req);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("organization/{id}")
     public ResponseEntity<?> edit(@PathVariable Long id, @RequestBody OrganizationRequest req) {
         return organizationService.edit(id, req);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("organization/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         return organizationService.delete(id);
     }

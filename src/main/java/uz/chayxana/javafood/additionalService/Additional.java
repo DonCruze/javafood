@@ -1,8 +1,12 @@
 package uz.chayxana.javafood.additionalService;
 
+import uz.chayxana.javafood.contact.Contact;
+import uz.chayxana.javafood.dto.AdditionalRequest;
+import uz.chayxana.javafood.dto.ContactRequest;
 import uz.chayxana.javafood.organization.Organization;
 
 import javax.persistence.*;
+import java.util.Optional;
 
 @Entity
 @Table(name = "additional_service")
@@ -19,9 +23,13 @@ public class Additional {
     @Column(name = "description", length = 4000)
     private String description;
 
+    @Column(name = "trash")
+    private Boolean trash = false;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id", nullable = false)
     private Organization organization;
+
 
     public Additional() {
     }
@@ -34,9 +42,14 @@ public class Additional {
         this.organization = organization;
     }
 
-    public Additional setOrganization(Organization organization) {
-        this.organization = organization;
-        return this;
+    public static Additional dtoToEntity(AdditionalRequest req) {
+        return dtoToEntity(new Additional(), req);
+    }
+    public static Additional dtoToEntity(Additional additional, AdditionalRequest req) {
+        Optional.ofNullable(req.getName()).ifPresent(additional::setName);
+        Optional.ofNullable(req.getPrice()).ifPresent(additional::setPrice);
+        Optional.ofNullable(req.getDescription()).ifPresent(additional::setDescription);
+        return additional;
     }
 
     public Long getId() {
@@ -72,6 +85,21 @@ public class Additional {
 
     public Additional setDescription(String description) {
         this.description = description;
+        return this;
+    }
+
+    public Boolean getTrash() {
+        return trash;
+    }
+
+    public Additional setTrash(Boolean trash) {
+        this.trash = trash;
+        return this;
+    }
+
+
+    public Additional setOrganization(Organization organization) {
+        this.organization = organization;
         return this;
     }
 }

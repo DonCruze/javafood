@@ -8,14 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/v1/organization")
+@RequestMapping("api/v1")
 public class MenuController {
 
     @Autowired
     MenuService service;
 
-    @GetMapping("{id}/menu")
-    public ResponseEntity<?> findAll(@PathVariable Long id) {
-        return service.findAll(id);
-    }
 }
