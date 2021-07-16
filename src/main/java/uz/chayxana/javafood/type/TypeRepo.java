@@ -11,6 +11,5 @@ import java.util.Optional;
 
 @Repository
 public interface TypeRepo extends JpaRepository<Type, Long> {
-
-
+    Optional<Type> findByIdAndTrashIsFalse(Long id);
 }

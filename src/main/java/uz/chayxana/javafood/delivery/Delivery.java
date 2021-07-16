@@ -25,8 +25,7 @@ public class Delivery {
     @Column(name = "trash")
     private Boolean trash = false;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "organization_id", nullable = false)
+    @OneToOne(mappedBy = "delivery")
     private Organization organization;
 
     public Delivery() {
@@ -95,11 +94,6 @@ public class Delivery {
 
     public Delivery setTrash(Boolean trash) {
         this.trash = trash;
-        return this;
-    }
-
-    public Delivery setOrganization(Organization organization) {
-        this.organization = organization;
         return this;
     }
 }

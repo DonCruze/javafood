@@ -11,6 +11,7 @@ import uz.chayxana.javafood.contact.Contact;
 import uz.chayxana.javafood.contact.ContactRepo;
 import uz.chayxana.javafood.dto.*;
 import uz.chayxana.javafood.organization.Organization;
+import uz.chayxana.javafood.organization.OrganizationRepo;
 import uz.chayxana.javafood.organization.OrganizationService;
 
 import java.util.List;
@@ -21,6 +22,8 @@ import java.util.stream.Collectors;
 public class DeliveryService {
     @Autowired
     DeliveryRepo deliveryRepo;
+    @Autowired
+    OrganizationRepo organizationRepo;
     @Autowired
     OrganizationService organizationService;
 
@@ -59,45 +62,13 @@ public class DeliveryService {
         return deliveryRepo.findById(id);
     }
 
-    public ResponseEntity<?> add(Long orgId, DeliveryRequest req) {
+    public ResponseEntity<?> edit(Long orgId, DeliveryRequest req) {
         Optional<Organization> organizationOptional = organizationService.findByIdOptional(orgId);
         if (organizationOptional.isPresent()) {
+            organizationOptional.get().setDelivery(Delivery.reqToEntity(organizationOptional.get().getDelivery(), req));
             return new ResponseEntity(
-                    DeliveryResponse.entityToResponse(deliveryRepo.save(Delivery.reqToEntity(req).setOrganization(organizationOptional.get()))),
+                    DeliveryResponse.entityToResponse(organizationRepo.save(organizationOptional.get()).getDelivery()),
                     HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>("NOT_FOUND_ORGANIZATION", HttpStatus.NOT_FOUND);
-        }
-    }
-
-    public ResponseEntity<?> delete(Long id) {
-        Optional<Delivery> deliveryOptional = findById(id);
-
-        if (deliveryOptional.isPresent()) {
-
-            Delivery delivery = deliveryOptional.get();
-            delivery.setTrash(true);
-            deliveryRepo.save(delivery);
-            return new ResponseEntity("SUCCESS", HttpStatus.OK);
-
-        } else {
-            return new ResponseEntity(HttpStatus.NOT_FOUND.toString(), HttpStatus.NOT_FOUND);
-        }
-
-    }
-
-    public ResponseEntity<?> edit(Long orgId, DeliveryRequest req, Long deliveryId) {
-        Optional<Organization> organizationOptional = organizationService.findByIdOptional(orgId);
-        if (organizationOptional.isPresent()) {
-            Optional<Delivery> delivery = deliveryRepo.findByIdAndTrashIsFalse(deliveryId);
-            if (delivery.isPresent())
-                return new ResponseEntity(
-                        DeliveryResponse.entityToResponse(deliveryRepo.save(Delivery.reqToEntity(delivery.get(),req).setOrganization(organizationOptional.get()))),
-                        HttpStatus.OK);
-            else
-                return new ResponseEntity(
-                        "delivery not found",
-                        HttpStatus.BAD_REQUEST);
         } else {
             return new ResponseEntity<>("Organization not found", HttpStatus.BAD_REQUEST);
         }

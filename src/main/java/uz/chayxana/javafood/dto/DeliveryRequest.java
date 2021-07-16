@@ -2,7 +2,7 @@ package uz.chayxana.javafood.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class DeliveryRequest{
+public class DeliveryRequest {
     @JsonProperty("price")
     private Long price;
     @JsonProperty("extraPrice")
@@ -11,7 +11,6 @@ public class DeliveryRequest{
     private String starTime;
     @JsonProperty("end_time")
     private String endTime;
-
 
     public DeliveryRequest() {
     }
@@ -22,7 +21,6 @@ public class DeliveryRequest{
         this.starTime = starTime;
         this.endTime = endTime;
     }
-
 
     public Long getPrice() {
         return price;

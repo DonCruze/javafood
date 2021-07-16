@@ -9,9 +9,7 @@ import uz.chayxana.javafood.menu.Menu;
 import uz.chayxana.javafood.type.Type;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Data
 @Entity
@@ -21,12 +19,15 @@ public class Organization {
     @GeneratedValue
     private Long id;
 
-    @ManyToMany
-    @JoinTable(
-            name = "organization_types",
-            joinColumns = @JoinColumn(name = "organization_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "type_id", referencedColumnName = "id"))
-    private List<Type> types;
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            })
+    @JoinTable(name = "organization_types",
+            joinColumns = { @JoinColumn(name = "organization_id") },
+            inverseJoinColumns = { @JoinColumn(name = "type_id") })
+    private Set<Type> types = new HashSet<>();
 
     @Column(name = "name", unique = true)
     private String name;
@@ -43,8 +44,8 @@ public class Organization {
     @Column(name = "logo")
     private String logo;
 
-    @OneToMany(mappedBy = "organization")
-    private List<Delivery> deliveries = new ArrayList<>();
+    @OneToOne(cascade = CascadeType.ALL)
+    private Delivery delivery;
 
     @OneToMany(mappedBy = "organization")
     private List<Contact> contacts = new ArrayList<>();
@@ -76,6 +77,15 @@ public class Organization {
         Optional.ofNullable(req.getLongitude()).ifPresent(entity::setLongitude);
         Optional.ofNullable(req.getStarTime()).ifPresent(entity::setStarTime);
         Optional.ofNullable(req.getEndTime()).ifPresent(entity::setEndTime);
+        Optional.ofNullable(req.getDelivery()).ifPresent(delivery -> {
+//            entity.getDelivery().setExtraPrice();
+            Delivery temp = new Delivery();
+            temp.setPrice(delivery.getPrice());
+            temp.setExtraPrice(delivery.getExtraPrice());
+            temp.setStartTime(delivery.getStarTime());
+            temp.setEndTime(delivery.getEndTime());
+            entity.setDelivery(temp);
+        });
         return entity;
     }
 }

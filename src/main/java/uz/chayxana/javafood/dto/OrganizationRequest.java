@@ -1,6 +1,7 @@
 package uz.chayxana.javafood.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import uz.chayxana.javafood.delivery.Delivery;
 
 import java.io.Serializable;
 
@@ -19,11 +20,13 @@ public class OrganizationRequest implements Serializable {
     private String longitude;
     @JsonProperty("logo_url")
     private String logo;
+    @JsonProperty("delivery")
+    private DeliveryRequest delivery;
 
     public OrganizationRequest() {
     }
 
-    public OrganizationRequest(String name, Long starTime, Long endTime, String description, String latitude, String longitude, String logo) {
+    public OrganizationRequest(String name, Long starTime, Long endTime, String description, String latitude, String longitude, String logo, DeliveryRequest delivery) {
         this.name = name;
         this.starTime = starTime;
         this.endTime = endTime;
@@ -31,6 +34,7 @@ public class OrganizationRequest implements Serializable {
         this.latitude = latitude;
         this.longitude = longitude;
         this.logo = logo;
+        this.delivery = delivery;
     }
 
     public String getName() {
@@ -87,5 +91,13 @@ public class OrganizationRequest implements Serializable {
 
     public void setLogo(String logo) {
         this.logo = logo;
+    }
+
+    public DeliveryRequest getDelivery() {
+        return delivery;
+    }
+
+    public void setDelivery(DeliveryRequest delivery) {
+        this.delivery = delivery;
     }
 }
